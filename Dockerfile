@@ -1,4 +1,4 @@
-FROM php:7.4-cli-alpine
+FROM alpine:3.10
 
 COPY test.sh ./
 

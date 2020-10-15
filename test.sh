@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/sh -l
 
 pwd
 ls
