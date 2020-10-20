@@ -1,8 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash -eu
 
-pwd
-ls
-
-echo "Hello $1 $2"
-time=$(date)
-echo "::set-output name=time::$time"
+echo $0
+git status

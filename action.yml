@@ -1,16 +1,12 @@
 name: 'Exec php-ast'
-description: 'Greet someone and record the time'
+description: 'phpファイル'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  main-branch:
+    description: 'default branch name'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+    default: 'main'
 runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args:
-        - ${{ inputs.who-to-greet }}
-        - 'bzz'
+    using: 'composite'
+    steps:
+      - run: $GITHUB_ACTION_PATH/test.sh
+        shell: bash
