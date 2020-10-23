@@ -1,15 +1,12 @@
 on: [push]
 
 jobs:
-  hello_world_job:
-    runs-on: ubuntu-latest
-    name: A job to say hello
+  php_ast_job:
+    name: PHP Ast
+    runs-on: ubuntu-18.04
     steps:
-    - name: Hello world action step
-      id: hello
-      uses: fan-ADN/php-ast-action@v20.10.3
+    - name: Exec
+      id: php-ast-action
+      uses: fan-ADN/php-ast-action@v20.10.5
       with:
-        who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+        main-branch: 'master'
