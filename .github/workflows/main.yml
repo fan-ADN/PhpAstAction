@@ -7,6 +7,6 @@ jobs:
     steps:
     - name: Exec
       id: php-ast-action
-      uses: fan-ADN/php-ast-action
+      uses: fan-ADN/php-ast-action@v20.10.6
       with:
         main-branch: 'master'
